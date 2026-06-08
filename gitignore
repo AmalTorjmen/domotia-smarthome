@@ -1,0 +1,22 @@
+# Fichiers secrets — NE JAMAIS commiter
+secrets.h
+credentials.h
+
+# Fichiers générés par Arduino IDE
+*.elf
+*.bin
+*.map
+*.hex
+
+# Dossiers système
+.DS_Store
+Thumbs.db
+
+# LittleFS build artifacts
+littlefs.bin
+
+# VS Code
+.vscode/
+
+# Windows
+desktop.ini
