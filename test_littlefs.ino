@@ -11,8 +11,8 @@
 #include <FS.h>
 
 // Configuration WiFi
-const char* ssid = "ORANGE_2575";
-const char* password = "P9MRY3E4";
+const char* ssid = "VOTRE_SSID";
+const char* password = "VOTRE_MOT_DE_PASSE";
 
 // Configuration DHT11
 #define DHTPIN 4
