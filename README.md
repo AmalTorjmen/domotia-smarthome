@@ -145,7 +145,7 @@ Messages JSON supportés :
 
 ## 📷 Schéma du circuit
 
-![Schéma Fritzing](docs/circuit.png)
+![Schéma Fritzing](circuit.png)
 
 ---
 
