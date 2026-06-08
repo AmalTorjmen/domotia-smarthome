@@ -1,23 +1,23 @@
-# 🏠 Domotia SmartHome — ESP32
+# Domotia SmartHome — ESP32
 
 Système de domotique basé sur **ESP32** avec interface web en temps réel. Permet de surveiller la température, l'humidité, le niveau de gaz, et de contrôler des LEDs et une alarme via un navigateur web.
 
 ---
 
-## 📋 Fonctionnalités
+## Fonctionnalités
 
-- 🌡️ Lecture de **température et humidité** (capteur DHT11)
-- 💨 Surveillance du **niveau de gaz** (MQ-2 ou similaire) avec historique
-- 💡 Contrôle de **2 LEDs** à distance
-- 🔔 Activation/désactivation d'une **alarme sonore**
-- 🔐 **Authentification utilisateur** (inscription / connexion / suppression de compte)
-- 🌐 Interface web servie depuis la mémoire flash (LittleFS)
-- ⚡ Communication **WebSocket** temps réel (port 81)
-- 📡 API REST (port 80)
+- Lecture de **température et humidité** (capteur DHT11)
+- Surveillance du **niveau de gaz** (MQ-2) avec historique
+- Contrôle de **2 LEDs** à distance
+- Activation/désactivation d'une **alarme sonore**
+- **Authentification utilisateur** (inscription / connexion / suppression de compte)
+- Interface web servie depuis la mémoire flash (LittleFS)
+- Communication **WebSocket** temps réel (port 81)
+- API REST (port 80)
 
 ---
 
-## 🔧 Matériel requis
+## Matériel requis
 
 | Composant              | Quantité |
 |------------------------|----------|
@@ -30,7 +30,7 @@ Système de domotique basé sur **ESP32** avec interface web en temps réel. Per
 
 ---
 
-## 📌 Brochage (Pinout)
+## Brochage (Pinout)
 
 | Composant             | Broche ESP32 |
 |-----------------------|--------------|
@@ -43,7 +43,7 @@ Système de domotique basé sur **ESP32** avec interface web en temps réel. Per
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 test_littlefs/
@@ -54,7 +54,7 @@ test_littlefs/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Avant de téléverser, modifiez les identifiants WiFi dans `test_littlefs.ino` :
 
@@ -63,11 +63,9 @@ const char* ssid     = "VOTRE_SSID";
 const char* password = "VOTRE_MOT_DE_PASSE";
 ```
 
-> ⚠️ **Ne commitez jamais vos vrais identifiants WiFi sur GitHub.** Utilisez un fichier `secrets.h` ignoré par `.gitignore`.
-
 ---
 
-## 📦 Bibliothèques requises (Arduino)
+## Bibliothèques requises (Arduino)
 
 Installez via le **Gestionnaire de bibliothèques** Arduino IDE :
 
@@ -80,7 +78,7 @@ Installez via le **Gestionnaire de bibliothèques** Arduino IDE :
 
 ---
 
-## 🚀 Installation et flash
+## Installation et flash
 
 ### 1. Installer l'IDE Arduino + support ESP32
 Ajouter dans les URL supplémentaires de gestionnaire de cartes :
@@ -104,19 +102,6 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ---
 
-## 🌐 API REST
-
-| Endpoint           | Méthode | Description                    |
-|--------------------|---------|-------------------------------|
-| `/`                | GET     | Interface web principale       |
-| `/api/sensor`      | GET     | Données capteurs (JSON)        |
-| `/api/gas-history` | GET     | Historique gaz (JSON)          |
-| `/api/led?led=1`   | GET     | Toggle LED 1                   |
-| `/api/led?led=2`   | GET     | Toggle LED 2                   |
-| `/api/alarm`       | GET     | Toggle alarme                  |
-
----
-
 ## 🔌 WebSocket (port 81)
 
 Connexion : `ws://<IP_ESP32>:81`
@@ -135,7 +120,7 @@ Messages JSON supportés :
 
 ---
 
-## 🔒 Sécurité
+## Sécurité
 
 - Les mots de passe sont stockés **en clair** dans `users.json` sur LittleFS — à améliorer avec un hash pour la production.
 - Maximum **10 clients WebSocket** simultanés.
@@ -143,12 +128,12 @@ Messages JSON supportés :
 
 ---
 
-## 📷 Schéma du circuit
+## Schéma du circuit
 
 ![Schéma Fritzing](circuit.png)
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT — libre d'utilisation, modification et distribution.
